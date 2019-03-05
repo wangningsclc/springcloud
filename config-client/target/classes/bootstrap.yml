@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: microservice-foo
+  cloud:
+    config:
+      uri: http://192.168.56.1:8080/
+      profile: dev
+      label: master
+  #spring cloud bus 消息代理自动刷新配置文件
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest

@@ -1,0 +1,31 @@
+server:
+  port: 8010
+spring:
+  application:
+    name: consumer-movie
+  zipkin:
+    base-url: http://192.168.56.1:9411/
+  sleuth:
+    sampler:
+      percentage: 1.0
+#  rabbitmq:
+#    host: localhost
+#    port: 15672
+#    username: guest
+#    password: guest
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:admin@localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+
+info:
+  app:
+    name: @project.artifactId@
+    encoding: @project.build.sourceEncoding@
+    java:
+      source: @java.version@
+logging:
+  level:
+    com.itmuch.cloud.movie.service.UserFeignClient: DEBUG

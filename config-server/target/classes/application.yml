@@ -1,0 +1,18 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/wangningsclc/spring-cloud-config-repo
+          username:
+          password:
+loggging:
+  level:
+    org.springframework.cloud: DEBUG
+    org.springframework.boot: DEBUG
+encrypt:
+  key: foo1
